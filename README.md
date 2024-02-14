@@ -2,22 +2,17 @@
 Delete this text and any other notes or example text that isn't relevant.
 
 # Your repo name here
-Repo summary here e.g., Repo for paper on measurement of ammonia emission from solid manure piles.
-We use this convention: `LastName-Year-PaperTopic` e.g., `Kamp-2024-NH3FluxMethods` or `Kamp-2024-NH3-flux` or `Kamp_2024_NH3_flux` etc.
+ Repo for paper on CH4 modelling validation, including ABM and Arrhenius models, .
+Garcia-2024-CH4Modelling.
 
 # Maintainer
-Your name.
-Contact information here: <https://au.dk/beginning_of_your_AU_email_address@bce> (e.g., <https://au.dk/sasha.hafner@bce>)
-
+Pablo García Pérez.
+Contact information here: <https://au.dk/pg@bce> 
 # Published paper
-Give the bibliographic information and a link e.g., <https://doi.org/10.1016/j.aeaoa.2023.100205>, here.
 
 # Releases
-Add a note to users about releases here, e.g.: 
 
-See [Releases](https://github.com/AU-BCE-EE/template-paper/releases) for the latest release, or to find a release associated with a particular event.
 
-Be sure to use the correct URL!
 
 # Directory information
 Describe the repo directories here.
