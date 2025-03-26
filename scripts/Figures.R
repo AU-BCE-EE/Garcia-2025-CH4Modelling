@@ -2,20 +2,20 @@ library(cowplot)
 library(ggplot2)
 library(readxl)
 ### Figures Paper III ###
-setwd("O:/Tech_BCE/Environmental Engineering/Air Quality Engineering/Pablo García/METEMIS/ABM model")
-load("Model output/Model_paper_new.RData")
+setwd("...") #Choose own directory
+load("Rfiles/Model_paper_new.RData")
 
-load("RData/CH4_AVG.RData")
-load("RData/Enteric_AVG.RData")
-load("RData/Pigs.RData")
-load("RData/Slurry_T.RData")
-load("RData/Sprod_S5.RData")
-load("RData/Sprod_S6.RData")
+load("Rfiles/CH4_AVG.RData")
+load("Rfiles/Enteric_AVG.RData")
+load("Rfiles/Pigs.RData")
+load("Rfiles/Slurry_T.RData")
+load("Rfiles/Sprod_S5.RData")
+load("Rfiles/Sprod_S6.RData")
 A_default<-read.table("Rfiles/A_default.txt")
 Flow<-read.table("Rfiles/Flow.txt",header = TRUE)
 Room_T<-read.table("Rfiles/Room_T.txt",header = TRUE)
   
-Batch4<-read_excel("Batch4_MA.xlsx")
+Batch4<-read_excel("Batch 4/Batch4_MA.xlsx")
 Batch4$Date<-as.Date(c("2023-02-14","2023-02-14","2023-03-21","2023-03-21",
                        "2023-04-18","2023-04-18","2023-05-02","2023-05-02"))
 Time_0<-as.Date("2022-05-09") #Start of Section 5
@@ -125,8 +125,8 @@ data_merged2[, .(mean_T = mean(mean_RoomT,na.rm=TRUE),
 write.table(dt_plot5, file = "Emissions_S5.txt", sep = "\t", row.names = TRUE, col.names = NA)
 
 
-file_list1 <- list.files(path = "../", pattern = "rates2\\.txt$", full.names = TRUE,recursive = TRUE)
-file_list2 <- list.files(path = "../", pattern = "Rates2\\.txt$", full.names = TRUE,recursive = TRUE)
+file_list1 <- list.files(path = ".../", pattern = "rates2\\.txt$", full.names = TRUE,recursive = TRUE) #Choose own path
+file_list2 <- list.files(path = ".../", pattern = "Rates2\\.txt$", full.names = TRUE,recursive = TRUE) #Choose own path
 file_list <- c(file_list1,file_list2)
 # Read each file and combine them into a single data.frame
 combined_data <- file_list %>%
@@ -148,8 +148,8 @@ dt_CH4_rate_S6<-data.table(time = c(26,54,68,117,145,159,208,236,250),
                            Rate_S6_Max = Rate_S6_Max)
 
 ## Compare with SO Petersen #####################################################
-file_list1 <- list.files(path = "../", pattern = "rates\\.txt$", full.names = TRUE,recursive = TRUE)
-file_list2 <- list.files(path = "../", pattern = "Rates\\.txt$", full.names = TRUE,recursive = TRUE)
+file_list1 <- list.files(path = ".../", pattern = "rates\\.txt$", full.names = TRUE,recursive = TRUE) # Choose own path
+file_list2 <- list.files(path = ".../", pattern = "Rates\\.txt$", full.names = TRUE,recursive = TRUE) # Choose own path
 file_list <- c(file_list1,file_list2)
 # Read each file and combine them into a single data.frame
 combined_data <- file_list %>%
@@ -169,10 +169,6 @@ Rate_S6_Max<-rowMeans(combined_data[,c(8,10,12)],na.rm=TRUE)/24
 ##Plot
 S5_CH4<-ggplot()+geom_point(aes(dt_plot5$time,dt_plot5$CH4_slurry_pig,color="Measured"))+
   geom_line(aes(dt_plot5$time,dt_plot5$CH4_slurry_pig),color="grey80",size=0.3)+
-  #geom_point(aes(df_B4$time,df_B4$CH4_Total_pig,color="Measured"))+
-  #geom_line(aes(df_B4$time,df_B4$CH4_Total_pig,color="Measured"),color="grey80",size=0.3)+
-  #geom_point(aes(out_S5_2.0_new$time,out_S5_2.0_new$CH4_A_emis_rate,color="Predicted: Arrhenius model"))+
-  #geom_point(aes(out_S5_2.0_new$time,out_S5_2.0_new$CH4_emis_rate,color="Predicted: ABM_Model"))+
   geom_line(aes(dt_plot5$time,dt_plot5$CH4_A_pig,color="Predicted: Arrhenius model"))+
   geom_line(aes(dt_plot5$time,dt_plot5$CH4_ABM_pig,color="Predicted: ABM"))+
   geom_line(aes(dt_plot5$time,dt_plot5$CH4_A_opt_pig,color="Predicted: optimized Arrhenius model"))+
@@ -183,12 +179,10 @@ S5_CH4<-ggplot()+geom_point(aes(dt_plot5$time,dt_plot5$CH4_slurry_pig,color="Mea
   theme_bw()+xlab("Time, days")+ylab(expression("Emissions, g pig"^-1*" day"^-1*""))+
   theme(legend.position = "none") +
   scale_color_manual("",values=c("black","grey60","green","cyan","red","darkgreen","blue"))+
-  #scale_color_manual("",values=c("black","red","green","blue","red","darkgreen","blue"))+
   theme(panel.grid = element_blank())+
   geom_rect(aes(xmin=0, xmax=77, ymin=-Inf, ymax=Inf,fill="Batch 1"), alpha = 0.09, colour = NA)+
 geom_rect(aes(xmin=95, xmax=190, ymin=-Inf, ymax=Inf,fill="Batch 2"), alpha = 0.09, colour = NA)+
 geom_rect(aes(xmin=197, xmax=276, ymin=-Inf, ymax=Inf,fill="Batch 3"), alpha = 0.09, colour = NA)+
-#geom_rect(aes(xmin=281, xmax=358, ymin=-Inf, ymax=Inf,fill="Batch 4"), alpha = 0.09, colour = NA)+
   theme(plot.title = element_text(size = 9))+
   xlim(c(0,276))+
   scale_fill_manual('',values = c('grey1','grey30',"grey60","grey80"))
@@ -290,7 +284,6 @@ S6_CH4<-ggplot()+geom_point(aes(dt_plot6$time,dt_plot6$CH4_slurry_pig,color="Mea
   theme_bw()+xlab("Time, days")+ylab(expression("Emissions, g pig"^-1*" day"^-1*""))+
   theme(legend.position = "none") +
   scale_color_manual("",values=c("black","grey","green","cyan","red","darkgreen","blue"))+
-  #scale_color_manual("",values=c("black","red","green","blue","red","darkgreen","blue"))+
   theme(panel.grid = element_blank())+
   geom_rect(aes(xmin=0, xmax=75, ymin=-Inf, ymax=Inf,fill="Batch 1"), alpha = 0.09, colour = NA)+
   geom_rect(aes(xmin=96, xmax=180, ymin=-Inf, ymax=Inf,fill="Batch 2"), alpha = 0.09, colour = NA)+
@@ -302,8 +295,6 @@ A<-ggplot()+geom_point(aes(dt_plot5$time,dt_plot5$CH4_slurry_pig,color="Measured
   geom_line(aes(dt_plot5$time,dt_plot5$CH4_slurry_pig),color="grey80",size=0.3)+
   geom_point(aes(df_B4$time,df_B4$CH4_Total_pig,color="Measured"))+
   geom_line(aes(df_B4$time,df_B4$CH4_Total_pig,color="Measured"),color="grey80",size=0.3)+
-  #geom_point(aes(out_S5_2.0_new$time,out_S5_2.0_new$CH4_A_emis_rate,color="Predicted: Arrhenius model"))+
-  #geom_point(aes(out_S5_2.0_new$time,out_S5_2.0_new$CH4_emis_rate,color="Predicted: ABM_Model"))+
   geom_line(aes(dt_plot5$time,dt_plot5$CH4_A_pig,color="Predicted: Arrhenius model"))+
   geom_line(aes(dt_plot5$time,dt_plot5$CH4_ABM_pig,color="Predicted: ABM"))+
   geom_line(aes(dt_plot5$time,dt_plot5$CH4_ABM_pig,color="Predicted: optimized ABM"))+
@@ -312,18 +303,16 @@ A<-ggplot()+geom_point(aes(dt_plot5$time,dt_plot5$CH4_slurry_pig,color="Measured
   geom_point(aes(dt_CH4_rate_S5$time,dt_CH4_rate_S5$Rate_S5_Max,color="MPR"),size=2,shape=17)+
   theme_bw()+xlab("Time, days")+ylab(expression("Emissions, g pig"^-1*" day"^-1*""))+
   scale_color_manual("",values=c("black","grey","green","cyan","red","darkgreen","blue"))+
-  #scale_color_manual("",values=c("black","red","green","blue","red","darkgreen","blue"))+
   theme(panel.grid = element_blank())+
   geom_rect(aes(xmin=0, xmax=77, ymin=-Inf, ymax=Inf,fill="Batch 1"), alpha = 0.09, colour = NA)+
   geom_rect(aes(xmin=95, xmax=171, ymin=-Inf, ymax=Inf,fill="Batch 2"), alpha = 0.09, colour = NA)+
   geom_rect(aes(xmin=197, xmax=276, ymin=-Inf, ymax=Inf,fill="Batch 3"), alpha = 0.09, colour = NA)+
-  #geom_rect(aes(xmin=281, xmax=358, ymin=-Inf, ymax=Inf,fill="Batch 4"), alpha = 0.09, colour = NA)+
   scale_fill_manual('',values = c('grey1','grey30',"grey60","grey80"))
 
 legend <- get_legend(A)
 group1 <- plot_grid(S5_CH4,S6_CH4, ncol = 1, align = "hv")
 Fig1<-plot_grid(group1,legend,rel_widths = c(1, .5))
-ggsave(plot=Fig1, filename="Figures/Fig1_ModelCH4.png", width=9, height=5, bg="white", dpi=500)
+ggsave(plot=Fig1, filename="plots/Figure1.png", width=9, height=5, bg="white", dpi=500)
 
 ### Figure 5 ###
 library(scales)
@@ -351,7 +340,7 @@ dt_RMSE_S6 <- dt_plot6[, .(RMSE_ABM = RMSE(CH4_slurry_pig,CH4_ABM_pig),
                        by = .(Batch)]
 
 #CH4 g pig day
-load("RData/mintegrate.RData")
+load("scripts/mintegrate.RData")
 library(zoo)
 #Section 5
 # Interpolate NaN values using na.approx at CH4_Total and CH4_enteric
@@ -442,9 +431,9 @@ library(dplyr)
 # set working directory
 
 # load data
-metadata <- readxl::read_excel("../Microbial analysis/DNA/metadataPablo.xlsx")
-otutable_V1V8 <- read_excel("../Microbial analysis/DNA/otutable_pablo_v1-8.xlsx")
-otutable_mcra <- read_excel("../Microbial analysis/DNA/otutable_paclo_mcra.xlsx")
+metadata <- readxl::read_excel("data/DNA/metadataPablo.xlsx")
+otutable_V1V8 <- read_excel("data/DNA/otutable_pablo_v1-8.xlsx")
+otutable_mcra <- read_excel("data/DNA/otutable_paclo_mcra.xlsx")
 
 # create ampvis object
 d_V1V8 <- amp_load(otutable = otutable_V1V8,
@@ -453,6 +442,14 @@ d_V1V8 <- amp_load(otutable = otutable_V1V8,
 d_mcra <- amp_load(otutable = otutable_mcra,
                    metadata = metadata)
 
+A<-amp_heatmap(d_mcra,
+               tax_aggregate = "Genus",
+               tax_add = "Species",
+               min_abundance = 0.1,
+               facet_by = "sample_type",
+               tax_show = 15)
+
+ggsave(plot=A,"plots/FigureS4.png", width = 15, height = 8)
 
 
 ##Plot relative abundance
@@ -541,7 +538,7 @@ DNA<-ggplot(datlong, aes(widths, relative, fill = Genus)) +
 
 
 ##PROTEIN ANALYSIS
-dat_prot<-read.table(file="../Microbial analysis/Proteins/Tax_counts3.tsv",header=TRUE, sep = "\t")
+dat_prot<-read.table(file="data/Proteins/Tax_counts3.tsv",header=TRUE, sep = "\t")
 
 Genus<-rep(dat_prot$genus,11)
 #Species<-rep(data$species,11)
@@ -701,7 +698,7 @@ Prot_legend<-ggplot(df_Prot,aes(x,y,fill=Genus))+geom_col()+
         legend.title = element_text(size = 14,face = "bold"))+
   guides(fill = guide_legend(nrow = 3)) 
 ## qPCR
-dat_qPCR <- read_excel("../Microbial analysis/DNA/qPCR.xlsx")
+dat_qPCR <- read_excel("data/DNA/qPCR.xlsx")
 class(dat_qPCR)<-c("data.table","data.frame")
 dat_qPCR$widths<-1
 dat_qPCR$widths[which(dat_qPCR$SampleID=="Time0_Solid_Before")]<-1
@@ -802,9 +799,56 @@ Fig2pre <- plot_grid(qPCR,DNA,Prot, ncol = 1, align = "hv",rel_heights = c(1, 1)
 Fig2pre2 <- plot_grid(Fig2pre, get_legend(Common_legend), nrow = 2, align = "v", axis = "b",rel_heights = c(1,0.1))
 Fig2pre3 <- plot_grid(Fig2pre2, get_legend(DNA_legend), nrow = 2, align = "v", axis = "b",rel_heights = c(1,0.1))
 Fig2 <- plot_grid(Fig2pre3, get_legend(Prot_legend), nrow = 2, align = "v", axis = "b",rel_heights = c(1,0.1))
-ggsave(plot=Fig2,"Figures/Fig2_Microbes.png", width = 12, height = 15,bg='white')
+ggsave(plot=Fig2,"plots/Figure2.png", width = 12, height = 15,bg='white')
+
+
+
+##Heatmap activity
+
+SampleID<-c(rep("Day0_B_BS",nrow(data)),rep("Day0_B_SF",nrow(data)),rep("Day0_A_BS",nrow(data)),
+            rep("Day0_A_SF",nrow(data)),rep("Day35_B_BS",nrow(data)),rep("Day35_A_BS",nrow(data)),
+            rep("Day35_A_LF",nrow(data)),rep("Day63_B_BS",nrow(data)),rep("Day63_A_BS",nrow(data)),
+            rep("Day77_B_BS",nrow(data)),rep("Day77_A_BS",nrow(data)))
+
+df_prots<-cbind.data.frame(Genus,
+                           Tax_counts,SampleID)
+df_prots$SampleID <- factor(df_prots$SampleID , levels = c("Day0_B_SF", "Day0_B_BS", "Day0_A_BS",
+                                                           "Day0_A_SF","Day35_B_BS","Day35_A_BS",
+                                                           "Day35_A_LF","Day63_B_BS","Day63_A_BS",
+                                                           "Day77_B_BS","Day77_A_BS"))
 
 
 
 
+##Genus
+Gns<-tapply(df_prots$Tax_counts,list(df_prots$Genus,df_prots$SampleID),sum,na.rm=TRUE)
 
+
+pT_Gns<-Gns
+
+for (i in 1:11){
+  pT_Gns[,i]<-Gns[,i]/sum(Gns[,i])*100
+  
+}
+
+# Remove non identified things
+pT_Gns<-pT_Gns[-1,]
+RelP<-RelP[-1,]
+
+
+
+##Heatmap activity
+
+######Select only  more abundant######
+Sum<-rowSums(pT_Gns)
+pT_Gns_F10 <- cbind(pT_Gns, RowSum = Sum)
+Sortmaxmin<-order(pT_Gns_F10[, 12],decreasing=TRUE)
+pT_Gns_F10<-pT_Gns_F10[Sortmaxmin,]
+pT_Gns_F10<-pT_Gns_F10[,-12]
+df_mcra<-pT_Gns_F10[,-12]
+########################################
+A<-pheatmap(pT_Gns_F10[1:25,],display_numbers = TRUE,
+            number_color = "black",cluster_rows = FALSE,
+            cluster_cols = FALSE,
+            fontsize_number = 8,legend=FALSE,main="Genus percentage relative to total sum")
+ggsave(plot=A,"plots/FigureS5.png", width = 7, height = 5)

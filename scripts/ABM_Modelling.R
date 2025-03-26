@@ -1598,7 +1598,7 @@ setwd("O:/Tech_BCE/Environmental Engineering/Air Quality Engineering/Pablo Garc√
 legend <- get_legend(AmT)
 group1 <- plot_grid(S5_massT,S6_massT, ncol = 1, align = "hv")
 FigS1<-plot_grid(group1,legend,rel_widths = c(1, .5))
-ggsave(plot=FigS1,"Figures/FigS1_Tmass_checks.png", width = 9, height = 5,bg='white')
+ggsave(plot=FigS1,"plots/FigureS3.png", width = 9, height = 5,bg='white')
 
 
 

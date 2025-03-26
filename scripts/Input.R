@@ -408,7 +408,7 @@ geom_line(aes(daily_avg_Conc$`as.Date(Time_2)`,daily_avg_Conc$VR6),color='green'
   xlab("")+ylab(expression("VR, m"^3*" h"^-1*""))+ggtitle("b) Section 2")
 
 FigS2 <- plot_grid(VR5,VR6, ncol = 1, align = "hv")
-ggsave(plot=FigS2,"../ABM model/Figures/FigS2_VR.png", width = 9, height = 5,bg='white')
+ggsave(plot=FigS2,".../plots/FigureS1.png", width = 9, height = 5,bg='white')
 
 ##Add missing dates with Cprod equation
 start_date <- as.POSIXct("2022-10-12 12:00:00") 
