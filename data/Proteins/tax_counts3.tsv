@@ -1,0 +1,90 @@
+genus	PG1_HK_JLN_REMESH	PG2_HK_JLN_REMESH	PG3_HK_JLN_REMESH	PG4_HK_JLN_REMESH	PG5_HK_JLN_REMESH	PG6_HK_JLN_REMESH	PG7_HK_JLN_REMESH	PG8_HK_JLN_REMESH	PG9_HK_JLN_REMESH	PG10_HK_JLN_REMESH	PG11_HK_JLN_REMESH
+	132.0	76.0	335.0	232.0	51.0	346.0	216.0	283.0	440.0	503.0	280.0
+Acetivibrio	1.0	2.0	4.0	1.0		3.0	2.0	1.0	4.0	2.0	4.0
+Anaerocolumna	5.0	1.0	7.0	2.0		12.0	5.0	9.0	5.0	4.0	13.0
+Avena	1.0		9.0	7.0		3.0	4.0	4.0	1.0	2.0	3.0
+Bacteroides	2.0	1.0	10.0	3.0		7.0	8.0	8.0	6.0	4.0	8.0
+Candidatus Argoarchaeum	1.0		2.0								1.0
+Candidatus Methanoplasma	2.0		2.0	2.0				1.0	1.0	1.0	2.0
+Candidatus Methanosuratincola	1.0			1.0							
+Caproiciproducens	2.0	3.0	7.0	4.0	1.0	1.0	1.0	1.0	1.0	2.0	2.0
+Clostridium	3.0		9.0	8.0		7.0	1.0	2.0	7.0	3.0	5.0
+Coprococcus	4.0	3.0	11.0	19.0		33.0	8.0	4.0	12.0	12.0	16.0
+Desulfonispora	1.0		5.0	2.0		4.0	2.0	3.0	1.0	1.0	2.0
+Enterococcus	2.0		7.0	2.0		2.0	7.0	8.0	1.0		5.0
+Faecalibacterium	2.0		5.0	4.0	1.0	32.0	7.0	13.0	7.0	12.0	10.0
+Fermentimonas	11.0	1.0	24.0	7.0	1.0	6.0	4.0	17.0	5.0	3.0	5.0
+Gemmiger	5.0	1.0	12.0	5.0		24.0	10.0	13.0	14.0	8.0	16.0
+Glycine	39.0	29.0	138.0	107.0	13.0	157.0	116.0	127.0	73.0	119.0	129.0
+Herbinix	3.0	3.0	1.0	2.0	2.0	5.0	3.0	5.0	7.0	6.0	5.0
+Hordeum	1.0	3.0	14.0	6.0		16.0	5.0	5.0	15.0	12.0	7.0
+Intestinibacter	2.0	1.0	14.0	9.0	7.0	7.0	4.0	7.0	5.0	2.0	3.0
+Jeotgalibaca	2.0		7.0	1.0	1.0	5.0	5.0	7.0	4.0	4.0	6.0
+Lactobacillus	15.0	14.0	101.0	76.0	17.0	251.0	71.0	27.0	61.0	61.0	92.0
+Limosilactobacillus	1.0	2.0	5.0	2.0	1.0	12.0	2.0	3.0	8.0	4.0	5.0
+Methanobrevibacter	11.0	3.0	19.0	6.0	1.0	7.0	6.0	4.0	9.0	9.0	3.0
+Methanocorpusculum	1.0		2.0	1.0		3.0	1.0	1.0		2.0	1.0
+Methanoculleus	6.0	11.0	56.0	48.0		30.0	12.0	87.0	8.0	45.0	17.0
+Methanofollis	2.0		5.0	2.0		8.0		12.0	3.0	4.0	4.0
+Methanohalophilus	2.0		3.0	1.0	1.0	3.0	2.0	3.0	1.0	5.0	3.0
+Methanolobus	1.0		1.0	3.0	2.0	2.0	1.0		3.0	6.0	
+Methanomassiliicoccus	1.0			2.0				1.0			
+Methanoplanus	1.0	2.0	2.0	2.0		3.0	2.0	3.0	3.0	3.0	3.0
+Methanosarcina	7.0	5.0	6.0	1.0		4.0	2.0	7.0	1098.0	1446.0	20.0
+Methanosphaera	2.0							2.0			
+Methanospirillum	1.0	1.0	4.0	7.0		4.0	4.0	6.0	2.0	3.0	1.0
+Methanothrix	1.0		5.0	12.0		3.0	1.0	1.0	2.0	8.0	1.0
+Oryza	3.0	1.0	16.0	5.0	3.0	21.0	4.0	10.0	20.0	23.0	17.0
+Parabacteroides	23.0	16.0	37.0	42.0	32.0	30.0	26.0	26.0	19.0	21.0	26.0
+Phascolarctobacterium	10.0	1.0	26.0	17.0	1.0	32.0	9.0	12.0	14.0	12.0	20.0
+Prevotella	156.0	61.0	280.0	122.0	29.0	619.0	241.0	213.0	334.0	173.0	351.0
+Romboutsia	3.0		5.0	2.0		2.0		2.0	1.0	1.0	2.0
+Ruminococcus	3.0	2.0	8.0	5.0	2.0	10.0	5.0	4.0	8.0	10.0	12.0
+Sodaliphilus	2.0	2.0	5.0	2.0	1.0	9.0	4.0	4.0	5.0	4.0	4.0
+Solanum	4.0	3.0	7.0	7.0	10.0	3.0	9.0	6.0	6.0	8.0	2.0
+Stemphylium	2.0	1.0	3.0			1.0		4.0	3.0	2.0	5.0
+Sus	42.0	24.0	150.0	99.0	14.0	166.0	99.0	98.0	73.0	107.0	99.0
+Syntrophaceticus	2.0	1.0	2.0	3.0	1.0	2.0	2.0	1.0	3.0	1.0	1.0
+Terrisporobacter	4.0		10.0	2.0	1.0	5.0		1.0	4.0	2.0	6.0
+Tissierella	8.0		17.0	3.0		18.0	10.0	19.0	13.0	18.0	18.0
+Triticum	9.0	8.0	48.0	30.0	1.0	48.0	23.0	22.0	17.0	38.0	33.0
+Turicibacter	1.0	1.0	8.0	8.0	3.0	2.0		1.0	1.0		4.0
+Vescimonas	4.0	1.0	12.0	2.0		6.0	8.0	4.0	6.0	5.0	14.0
+Wansuia	3.0	3.0	8.0	2.0	1.0	14.0	7.0	5.0	5.0	6.0	9.0
+Candidatus Methanofastidiosum		1.0	1.0	1.0		2.0		2.0	2.0	1.0	
+Clostridioides		1.0	4.0	7.0	4.0	5.0	1.0	3.0	3.0	6.0	4.0
+Methanobacterium		2.0	7.0	6.0		1.0	1.0	4.0	9.0	7.0	5.0
+Methanococcus		1.0	1.0	3.0		4.0	1.0	3.0	5.0	2.0	2.0
+Methanolacinia		1.0		1.0							
+Methanothermobacter		1.0	3.0	3.0		1.0		3.0	2.0	1.0	1.0
+Paraclostridium		1.0	1.0		1.0	1.0	1.0	1.0	2.0	1.0	1.0
+Sporobacter		1.0	3.0	2.0	1.0	2.0	1.0	2.0	4.0	3.0	5.0
+Atopostipes			3.0		1.0			1.0	1.0	1.0	1.0
+Candidatus Methanodesulfokores			1.0					1.0		2.0	1.0
+Candidatus Methanomethylophilus			2.0			2.0	2.0	1.0	1.0	2.0	
+Candidatus Syntrophoarchaeum			1.0	1.0		1.0	1.0	1.0	2.0		
+Metalysinibacillus			4.0	1.0		6.0	9.0	3.0			
+Methanocella			1.0			5.0	1.0		3.0	1.0	3.0
+Methanococcoides			1.0	1.0			1.0	1.0	1.0	3.0	2.0
+Methanopyrus			1.0			2.0			2.0	2.0	1.0
+Methanoregula			1.0	1.0				3.0	3.0	2.0	3.0
+Methanosphaerula			1.0	1.0				1.0			
+Methanothermococcus			1.0			1.0		1.0	2.0	3.0	2.0
+Monoglobus			2.0			2.0	3.0	1.0	3.0		2.0
+Candidatus Methanoperedens				3.0			1.0	1.0	3.0	2.0	
+Methanocaldococcus				1.0	1.0	4.0	1.0	2.0	5.0	8.0	1.0
+Methanosalsum				1.0		2.0			1.0		
+Solibaculum				1.0		4.0			1.0	3.0	
+Candidatus Methanohalarchaeum						1.0					
+Candidatus Methanolliviera						1.0					
+Methanocalculus						1.0		2.0		1.0	1.0
+Methanonatronarchaeum						1.0	1.0		1.0	1.0	
+Methermicoccus						1.0				1.0	
+Candidatus Methanomethylicus							1.0				
+Methanotorris							1.0		1.0	1.0	
+Candidatus Ethanoperedens								1.0	1.0		1.0
+Candidatus Methanoliparum								3.0			
+Methanimicrococcus								1.0		1.0	1.0
+Methanohalobium								1.0		1.0	1.0
+Methanomethylovorans									1.0		
+Methanothermus									1.0		

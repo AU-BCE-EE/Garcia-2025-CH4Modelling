@@ -1,0 +1,2 @@
+Rate_5.1_24	Rate_5.1_max	Rate_5.2_24	Rate_5.2_max	Rate_5.3_24	Rate_5.3_max	Rate_6.1_24	Rate_6.1_max	Rate_6.2_24	Rate_6.2_max	Rate_6.3_24	Rate_6.3_max	Units
+NA	-Inf	NA	-Inf	NA	-Inf	NA	122.928702216694	NA	151.341667785269	NA	-Inf	mg CH4/(Kg VS day)
