@@ -25,7 +25,7 @@ Contains data on the average CH4 emissions 2 hours before and 2 hours after disc
 Contains information on the slurry, feces, urine, and feed composition. Additionally, the subfolder `DNA` contains data for the DNA analysis for the relative abundance and the qPCR for the absolute abundance of methanogens, and the subfolder `Proteins` contains data for the relative activity based on proteomic analyses.
 ## `plots`
 Folder to store the generated Figures from the submitted manuscript
-## `data`
+## `Rdata`
 Contains the processed data necessary to generate the figures. Includes the default CH4 emissions with the current Danish Arrhenius model, the CH4 emissions predicted by the ABM and modified Arrhenius model, the measured emissions per day and per pig together with slurry temperature, slurry production, predicted pig mass, predicted enteric emissions, feed consumption, ventilation rate, and optimized parameters.  
 ## `Temperature_data`
 Contains the average measured temeprature from slurry from each section
