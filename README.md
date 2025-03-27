@@ -38,8 +38,6 @@ Contains the R files to process the data.
 
 **CH4 rate.R**: Calculates the CH4 rate from the collected slurry samples based on the measured CH4 concentration from the GC and the measured airflow from the AMPTS II. Calculates the CH4 rate in units of mg of CH4 per kg of VS per day to compare with the literature and in units of g CH4 per pig per day to compare with the measured emissions.
 
-**Temperature.R**: Reads the slurry temperature data from the three temperature sensors per section and generates Figure S2.
-
 **Figures.R**: Generates Figure 1 and 2 from the main manuscript, calculates the RMSE of the ABM and Arrhenius model, calculates the average cumulative CH4 per pig per day from the in-situ measurements, from the ABM, and from the Arrhenius, generates Figure S4 and S5.
 
 **optimize.R**: Optimize key parameters for a better fitting of the measured emissions.
