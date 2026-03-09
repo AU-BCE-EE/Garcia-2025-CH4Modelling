@@ -1,2 +1,0 @@
-Rate_5.1_24	Rate_5.1_max	Rate_5.2_24	Rate_5.2_max	Rate_5.3_24	Rate_5.3_max	Rate_6.1_24	Rate_6.1_max	Rate_6.2_24	Rate_6.2_max	Rate_6.3_24	Rate_6.3_max	Units
-NA	NA	NA	NA	NA	NA	1.19769831652123	1.66539884059746	1.16089753025941	1.62595565154749	NA	-Inf	g CH4/(pig day)
