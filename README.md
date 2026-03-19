@@ -1,5 +1,4 @@
-*Note to users of this template*: see the guidance here for setting up a paper repo: <https://github.com/AU-BCE-EE/GitHub-guidance/blob/main/paper-repos.md>.
-Delete this text and any other notes or example text that isn't relevant.
+
 
 # Garcia-2025-CH4-Modelling
 Repo for CH4 modelling validation in a commercial scale pig farm. Run main.R to generate the Figures contained in the `plots` folder
