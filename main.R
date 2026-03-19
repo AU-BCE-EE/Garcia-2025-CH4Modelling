@@ -49,9 +49,9 @@ library(pheatmap)
 
 # ---- Load scripts ----
 source(here("scripts","mintegrate.R")) #Function to calculate cumulative CH4 emissions
-source(here("scripts","optimization.R")) #Function to calculate cumulative CH4 emissions
-source(here("scripts","Ventilation rate.R")) #Function to calculate cumulative CH4 emissions
-source(here("scripts","raw_CRDS_data.R")) #Function to calculate cumulative CH4 emissions
+source(here("scripts","optimization.R")) #Function to run the optimization of the ABM and Arrhenius models
+source(here("scripts","Ventilation rate.R")) #Function to calculate the ventilation rate and missing gaps
+source(here("scripts","raw_CRDS_data.R")) #Function to read raw CRDS data (request full data if needed)
 
 source(here("scripts", "1_Fresh_slurry_composition.R")) # create man_pars list with farm data
 source(here("scripts","2_ABM_Inputs.R")) # ABM Inputs: temperature, slurry mass, evaporation rate,...
